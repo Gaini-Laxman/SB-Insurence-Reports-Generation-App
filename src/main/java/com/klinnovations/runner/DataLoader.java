@@ -20,7 +20,9 @@ public class DataLoader implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-
+		
+      repo.deleteAll();
+      
 		// Cash plan
 		CitizenPlan c1 = new CitizenPlan();
 		c1.setCitizenName("John");
