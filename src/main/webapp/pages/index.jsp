@@ -19,10 +19,10 @@
 </head>
 <body>
 
-	<div class="container" align="center">
-		<h3 class="pb-3 pt-3">Report Application</h3>
+	<div class="container pb-3 pt-3">
+		<h3 >Report Application</h3>
 	</div>
-	<hr />
+	
 
 	<form:form action="search" modelAttribute="search" method="POST">
 		<table>
@@ -62,6 +62,7 @@
 						data-date-format="mm/dd/yyyy" /></td>
 			</tr>
 			<tr>
+			<td><a href="/" class="btn btn-secondary ">Reset</a></td>
 				<td><input type="submit" value="Search" class="btn btn-primary" />
 				</td>
 
@@ -108,7 +109,7 @@
 			</c:forEach>
 			<tr>
 			<c:if test="${empty plans}">
-			<td colspan="7" style="text-align: center">No Record Found</td>
+			<td colspan="8" style="text-align: center">No Record Found</td>
 			</c:if>
 			</tr>
 		</tbody>
@@ -116,10 +117,10 @@
 	</table>
 
 	<hr />
+	
 
 	Export :
-	<a href="">Excel</a>
-	<a href="">Pdf</a>
+	<a href="">Excel</a> <a href="">Pdf</a>
 	</div>
 
 	<script

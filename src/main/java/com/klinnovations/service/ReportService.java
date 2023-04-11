@@ -1,6 +1,9 @@
 package com.klinnovations.service;
 
+import java.io.IOException;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 
 import com.klinnovations.entity.CitizenPlan;
 import com.klinnovations.request.SearchRequest;
@@ -14,7 +17,7 @@ public interface ReportService {
 
 	public List<CitizenPlan> search(SearchRequest request);
 
-	public boolean exportExcel();
+	public boolean exportExcel(HttpServletResponse response) throws Exception;
 
 	public boolean exportPdf();
 
